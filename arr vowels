@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include<string.h>
+int main(){
+
+	int index, str_length,i;
+	char str[10];
+    printf("\nEnter string: ");
+    scanf("%[^\n]s", str);
+    str_length = strlen(str);
+    for(index = 0; index < str_length; index++)
+	{
+		if(str[index] == 'a' || str[index] == 'e' ||
+			str[index] == 'i' || str[index] == 'o' || 
+			str[index] == 'u' || str[index] == 'A' ||
+			str[index] == 'E' || str[index] == 'I' ||
+			str[index] == 'O' || str[index] == 'U')
+		{
+			
+			printf("Vowel: %c at location: %d\n",str[index], index );
+		}
+	}
+	for (index = 0; index < str_length; index++)
+    {
+        printf("Address for %c is %d\n", str[index], &str[index]);
+    }
+
+	return 0;
+}
